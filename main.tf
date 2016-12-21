@@ -2,11 +2,11 @@
 provider "azurerm" {}
 
 # Create a resource group
-resource "azurerm_resource_group" "ResourceGrps" {
-  name     = "asotelo-terraform-n-tier"
+resource "azurerm_resource_group" "RscGrps" {
+  name     = "${var.ResourceGroup_Name}"
   location = "${var.Azure_Region}"
 
   tags {
-    environment = "Dev"
+    environment = "${var.Environment}"
   }
 }
